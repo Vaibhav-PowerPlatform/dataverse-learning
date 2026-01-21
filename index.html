@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power Platform Hub</title>
+<style>
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9fafb; }
+  header { background:#0078d4; color:white; padding:2rem; text-align:center; }
+  header h1 { margin:0; }
+  .section-title { text-align:center; font-size:2rem; margin:2rem 0 1rem; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; max-width:1200px; margin:0 auto; padding:0 2rem; }
+  .card { background:white; border-radius:12px; padding:1.5rem; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition:0.2s; }
+  .card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.1); }
+  .card h3 { color:#0078d4; margin-top:0; }
+  footer { text-align:center; padding:2rem; color:#6b7280; border-top:1px solid #e5e7eb; margin-top:4rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Power Platform Technical Hub</h1>
+  <p>Global solutions, patterns, and guides for Power Platform</p>
+</header>
+
+<section>
+  <h2 class="section-title">Capabilities</h2>
+  <div class="cards">
+    <div class="card"><h3>Power Apps</h3><p>Canvas & Model-driven apps, Power Fx formulas, UI/UX patterns.</p><a href="power-apps/index.html">Explore →</a></div>
+    <div class="card"><h3>Power Automate</h3><p>Cloud flows, approvals, error handling, and automation patterns.</p><a href="power-automate/index.html">Explore →</a></div>
+    <div class="card"><h3>Power BI</h3><p>Data modeling, DAX formulas, and reporting solutions.</p><a href="power-bi/index.html">Explore →</a></div>
+    <div class="card"><h3>Dataverse</h3><p>Entities, security, plugins, and scalable data architecture.</p><a href="dataverse/index.html">Explore →</a></div>
+    <div class="card"><h3>Governance & ALM</h3><p>Environment strategy, solution layering, and pipelines.</p><a href="governance/index.html">Explore →</a></div>
+    <div class="card"><h3>Power Fx</h3><p>Reusable formulas, complex logic, and app automation patterns.</p><a href="power-fx/index.html">Explore →</a></div>
+  </div>
+</section>
+
+<footer>
+  Built with ❤️ for the global Power Platform community
+</footer>
+
+</body>
+</html>
