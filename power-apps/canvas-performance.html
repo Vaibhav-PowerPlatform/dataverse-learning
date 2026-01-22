@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canvas App Performance – Power Apps</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f9fafb;
+    color: #1f2937;
+  }
+
+  header {
+    background: #742774;
+    color: white;
+    padding: 2rem;
+  }
+
+  header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+  }
+
+  h1, h2 {
+    color: #742774;
+  }
+
+  .note {
+    background: #f3e8f5;
+    padding: 1rem;
+    border-left: 5px solid #742774;
+    margin: 1.5rem 0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 4rem;
+    color: #6b7280;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="../index.html">← Home</a> |
+  <a href="index.html">Power Apps</a>
+</header>
+
+<div class="container">
+
+  <h1>Canvas App Performance Optimization</h1>
+
+  <p>
+    This guide focuses on improving performance in Power Apps canvas apps,
+    especially for enterprise-scale applications.
+  </p>
+
+  <h2>Common Performance Issues</h2>
+  <ul>
+    <li>Delegation warnings</li>
+    <li>Excessive API calls</li>
+    <li>Heavy formulas on screen load</li>
+  </ul>
+
+  <h2>Best Practices</h2>
+
+  <div class="note">
+    <strong>Tip:</strong> Avoid using non-delegable functions on large datasets.
+  </div>
+
+  <ul>
+    <li>Use delegation-friendly filters</li>
+    <li>Limit OnStart logic</li>
+    <li>Cache data using collections</li>
+  </ul>
+
+  <h2>When to Re-architect</h2>
+  <p>
+    If performance issues persist, consider splitting apps or redesigning
+    data access patterns.
+  </p>
+
+</div>
+
+<footer>
+  Power Apps • Performance • Real-world guidance
+</footer>
+
+</body>
+</html>
