@@ -34,4 +34,88 @@
   <h2 class="section-title">Error Handling in Power Automate</h2>
 
   <div class="card">
-    <h
+    <h3>Why Error Handling Matters</h3>
+    <p>
+      Error handling is critical for building reliable and maintainable Power Automate flows.
+      Properly designed error-handling logic ensures failures are detected, logged, and handled
+      without impacting downstream systems or users.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Configure Run After</h3>
+    <p>
+      The <strong>Configure run after</strong> feature allows actions to run based on the outcome
+      of previous steps such as success, failure, timeout, or skip.
+    </p>
+    <ul>
+      <li>Send notifications when a step fails</li>
+      <li>Execute fallback logic</li>
+      <li>Perform cleanup actions</li>
+    </ul>
+    <p>
+      📘 <a href="https://learn.microsoft.com/en-us/power-automate/configure-run-after" target="_blank">
+        Microsoft Documentation – Configure run after
+      </a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Using Scopes (Try / Catch / Finally)</h3>
+    <p>
+      Scopes allow grouping of actions and implementing structured error handling similar
+      to traditional programming patterns.
+    </p>
+
+    <ul>
+      <li><strong>Try:</strong> Main business logic</li>
+      <li><strong>Catch:</strong> Executes when the Try scope fails or times out</li>
+      <li><strong>Finally:</strong> Executes regardless of success or failure</li>
+    </ul>
+
+    <p>
+      📘 <a href="https://learn.microsoft.com/en-us/power-automate/create-scope" target="_blank">
+        Microsoft Documentation – Scopes
+      </a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Terminate Action</h3>
+    <p>
+      The <strong>Terminate</strong> action explicitly stops a flow and sets its final status.
+      This is useful when validation fails or critical conditions are not met.
+    </p>
+
+    <ul>
+      <li>Succeeded</li>
+      <li>Failed</li>
+      <li>Cancelled</li>
+    </ul>
+
+    <p>
+      📘 <a href="https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/flow-control#terminate" target="_blank">
+        Microsoft Documentation – Terminate
+      </a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Best Practices</h3>
+    <ul>
+      <li>Wrap critical logic in scopes</li>
+      <li>Use consistent naming for error-handling scopes</li>
+      <li>Log meaningful error details</li>
+      <li>Notify stakeholders when failures occur</li>
+      <li>Avoid silent failures</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  Built for the global Power Platform community
+</footer>
+
+</body>
+</html>
