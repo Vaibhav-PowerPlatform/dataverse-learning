@@ -1,140 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Power Automate – Error Handling</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn how to implement error handling in Microsoft Power Automate using scopes, configure run after, and best practices.">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power Automate – Error Handling</title>
+
+<style>
+  body { font-family: Arial, sans-serif; margin:0; background:#f9fafb; color:#1f2937; }
+  header { background:#0f6cbd; color:white; padding:2rem; text-align:center; }
+  header a { color:white; font-weight:bold; text-decoration:none; display:inline-block; margin-top:0.5rem; }
+  .container { max-width:1100px; margin:auto; padding:2rem; }
+  .section-title { font-size:2rem; margin-bottom:1rem; }
+  .card { background:white; padding:1.75rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.06); margin-bottom:2rem; }
+  .card h3 { color:#0f6cbd; margin-top:0; }
+  ul { padding-left:1.2rem; }
+  li { margin-bottom:0.5rem; }
+  a { color:#0f6cbd; text-decoration:none; font-weight:500; }
+  a:hover { text-decoration:underline; }
+  footer { text-align:center; padding:2rem; border-top:1px solid #e5e7eb; margin-top:4rem; color:#6b7280; }
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Power Automate</h1>
-    <p>Error Handling</p>
+  <h1>Power Automate</h1>
+  <p>Error Handling & Resilience</p>
+  <a href="../power-automate.html">← Back to Power Automate</a>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="error-handling.html" class="active">Error Handling</a></li>
-        <li><a href="business-logic.html">Business Logic</a></li>
-        <li><a href="integration-patterns.html">Integration Patterns</a></li>
-    </ul>
-</nav>
+<div class="container">
 
-<main>
-    <section id="overview">
-        <h2>Overview</h2>
-        <p>
-            Error handling in Power Automate is essential for building reliable and resilient workflows.
-            Proper error handling ensures that failures are detected, logged, and handled gracefully without
-            breaking downstream processes.
-        </p>
-    </section>
+  <h2 class="section-title">Error Handling in Power Automate</h2>
 
-    <section id="common-approaches">
-        <h2>Common Error Handling Approaches</h2>
-        <ul>
-            <li>Configure Run After</li>
-            <li>Scope-based Try/Catch/Finally pattern</li>
-            <li>Terminate action</li>
-            <li>Notifications and logging</li>
-        </ul>
-    </section>
-
-    <section id="configure-run-after">
-        <h2>Configure Run After</h2>
-        <p>
-            The <strong>Configure run after</strong> feature allows an action to execute based on the outcome
-            of a previous action.
-        </p>
-        <p>You can trigger an action when the previous step:</p>
-        <ul>
-            <li>Succeeds</li>
-            <li>Fails</li>
-            <li>Is skipped</li>
-            <li>Times out</li>
-        </ul>
-        <p>
-            This is useful for sending alerts, executing fallback logic, or performing cleanup tasks.
-        </p>
-        <p>
-            📘 Microsoft Documentation:
-            <a href="https://learn.microsoft.com/en-us/power-automate/configure-run-after" target="_blank">
-                Configure run after
-            </a>
-        </p>
-    </section>
-
-    <section id="scopes">
-        <h2>Using Scopes (Try / Catch / Finally)</h2>
-        <p>
-            Scopes in Power Automate allow you to group actions and apply structured error handling patterns
-            similar to traditional programming.
-        </p>
-
-        <h3>Try Scope</h3>
-        <p>
-            Contains the main business logic that may potentially fail.
-        </p>
-
-        <h3>Catch Scope</h3>
-        <p>
-            Configured to run only if the Try scope fails or times out.
-            Typically used for logging errors, sending notifications, or recovery actions.
-        </p>
-
-        <h3>Finally Scope</h3>
-        <p>
-            Runs regardless of whether the Try scope succeeds or fails.
-            Useful for cleanup tasks or final status updates.
-        </p>
-
-        <p>
-            📘 Microsoft Documentation:
-            <a href="https://learn.microsoft.com/en-us/power-automate/create-scope" target="_blank">
-                Use scopes in Power Automate
-            </a>
-        </p>
-    </section>
-
-    <section id="terminate">
-        <h2>Terminate Action</h2>
-        <p>
-            The <strong>Terminate</strong> action allows you to explicitly stop a flow and set its final status:
-        </p>
-        <ul>
-            <li>Succeeded</li>
-            <li>Failed</li>
-            <li>Cancelled</li>
-        </ul>
-        <p>
-            This is commonly used in validation scenarios or when critical conditions are not met.
-        </p>
-        <p>
-            📘 Microsoft Documentation:
-            <a href="https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/flow-control#terminate" target="_blank">
-                Terminate action
-            </a>
-        </p>
-    </section>
-
-    <section id="best-practices">
-        <h2>Best Practices</h2>
-        <ul>
-            <li>Always wrap critical logic in scopes</li>
-            <li>Log meaningful error details</li>
-            <li>Notify stakeholders when failures occur</li>
-            <li>Avoid silent failures</li>
-            <li>Use consistent naming for Try/Catch scopes</li>
-        </ul>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2026 Power Automate Learning Hub</p>
-</footer>
-
-</body>
-</html>
+  <div class="card">
+    <h
