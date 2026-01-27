@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power Automate – Business Logic & Conditions</title>
+
+<style>
+  body { font-family: Arial, sans-serif; margin:0; background:#f9fafb; color:#1f2937; }
+  header { background:#0f6cbd; color:white; padding:2rem; text-align:center; }
+  header a { color:white; font-weight:bold; text-decoration:none; display:inline-block; margin-top:0.5rem; }
+  .container { max-width:1100px; margin:auto; padding:2rem; }
+  .section-title { font-size:2rem; margin-bottom:1rem; }
+  .card { background:white; padding:1.75rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.06); margin-bottom:2rem; }
+  .card h3 { color:#0f6cbd; margin-top:0; }
+  ul { padding-left:1.2rem; }
+  li { margin-bottom:0.5rem; }
+  a { color:#0f6cbd; text-decoration:none; font-weight:500; }
+  a:hover { text-decoration:underline; }
+  footer { text-align:center; padding:2rem; border-top:1px solid #e5e7eb; margin-top:4rem; color:#6b7280; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Power Automate</h1>
+  <p>Business Logic & Conditions</p>
+  <a href="../power-automate.html">← Back to Power Automate</a>
+</header>
+
+<div class="container">
+
+  <h2 class="section-title">Business Logic in Power Automate</h2>
+
+  <div class="card">
+    <h3>Overview</h3>
+    <p>
+      Business logic in Power Automate allows flows to make decisions, branch execution paths,
+      and execute actions in parallel. These capabilities enable complex, real-world automation
+      scenarios.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>If / Condition</h3>
+    <p>
+      The <strong>Condition</strong> control evaluates a logical expression and routes the flow
+      into <strong>Yes</strong> or <strong>No</strong> branches.
+    </p>
+    <ul>
+      <li>Compare values (equals, greater than, contains)</li>
+      <li>Validate inputs and outputs</li>
+      <li>Control execution flow</li>
+    </ul>
+    <p>
+      📘 <a href="https://learn.microsoft.com/en-us/power-automate/use-conditions" target="_blank">
+        Microsoft Documentation – Conditions
+      </a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Switch</h3>
+    <p>
+      The <strong>Switch</strong> control is ideal when evaluating a single value against multiple
+      possible cases, improving readability and performance over nested conditions.
+    </p>
+    <ul>
+      <li>Cleaner alternative to multiple if/else blocks</li>
+      <li>Easy to maintain and extend</li>
+      <li>Improves flow readability</li>
+    </ul>
+    <p>
+      📘 <a href="https://learn.microsoft.com/en-us/power-automate/switch-case" target="_blank">
+        Microsoft Documentation – Switch
+      </a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Parallel Branch</h3>
+    <p>
+      Parallel branches allow multiple actions or scopes to run at the same time, reducing
+      execution time and improving performance.
+    </p>
+    <ul>
+      <li>Execute independent tasks concurrently</li>
+      <li>Improve flow performance</li>
+      <li>Merge branches after completion</li>
+    </ul>
+    <p>
+      📘 <a href="https://learn.microsoft.com/en-us/power-automate/parallel-branches" target="_blank">
+        Microsoft Documentation – Parallel Branches
+      </a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Nested Logic & Expressions</h3>
+    <p>
+      Complex automations often require nested conditions, expressions, and advanced operators
+      to handle multiple decision paths.
+    </p>
+    <ul>
+      <li>Use expressions for advanced comparisons</li>
+      <li>Avoid deeply nested logic when possible</li>
+      <li>Prefer Switch over multiple conditions</li>
+    </ul>
+    <p>
+      📘 <a href="https://learn.microsoft.com/en-us/power-automate/use-expressions" target="_blank">
+        Microsoft Documentation – Expressions
+      </a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Best Practices</h3>
+    <ul>
+      <li>Keep logic simple and readable</li>
+      <li>Name conditions and branches clearly</li>
+      <li>Use parallel branches only when actions are independent</li>
+      <li>Document complex decision logic</li>
+      <li>Test all possible paths</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  Built for the global Power Platform community
+</footer>
+
+</body>
+</html>
